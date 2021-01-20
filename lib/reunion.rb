@@ -29,4 +29,13 @@ class Reunion
 
     values
   end
+
+  def summary
+    all = []
+    breakout.each do |name, amt|
+      all << "#{name}: #{amt}\n"
+    end
+
+    all.join[0..-2]
+  end
 end
